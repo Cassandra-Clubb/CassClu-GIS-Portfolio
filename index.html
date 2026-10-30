@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cassandra Clubb | GIS Portfolio</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #ffffff;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    background: white;
+    padding: 1rem 5%;
+    border-bottom: 1px solid #eaeaea;
+    z-index: 100;
+}
+
+nav ul {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #2D6A4F;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: #f8f9fa;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: auto;
+    font-size: 1.1rem;
+    color: #666;
+}
+
+section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 80px 20px;
+}
+
+h2 {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.about {
+    text-align: center;
+    max-width: 800px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 30px;
+}
+
+.project-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    background: white;
+    transition: transform .2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.project-content {
+    padding: 20px;
+}
+
+.project-content h3 {
+    margin-bottom: 10px;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.skill {
+    background: #e9f5ef;
+    padding: 10px 18px;
+    border-radius: 20px;
+}
+
+.contact {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #f8f9fa;
+    color: #666;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+<h1>Cassandra Clubb</h1>
+<p>
+GIS Portfolio showcasing geospatial analysis, cartography,
+remote sensing, and geocomputing projects completed through academic
+and professional experiences.
+</p>
+</section>
+
+<section id="about">
+<h2>About Me</h2>
+
+<div class="about">
+<p>
+I am a Master of GIS student at the University of Minnesota with
+interests in spatial analysis, geocomputing, remote sensing,
+and environmental applications of GIS. This portfolio highlights
+projects that demonstrate technical GIS skills, data analysis,
+and problem-solving through geospatial technologies.
+</p>
+</div>
+
+</section>
+
+<section id="projects">
+
+<h2>Featured Projects</h2>
+
+<div class="projects-grid">
+
+<div class="project-card">
+<img src="https://via.placeholder.com/600x400" alt="">
+<div class="project-content">
+<h3>Endemic Species Analysis</h3>
+<p>
+Spatial analysis examining species distribution and environmental
+relationships using GIS methods.
+</p>
+</div>
+</div>
+
+<div class="project-card">
+<img src="https://via.placeholder.com/600x400" alt="">
+<div class="project-content">
+<h3>Classification Methods</h3>
+<p>
+Remote sensing project comparing classification techniques
+for land cover mapping.
+</p>
+</div>
+</div>
+
+<div class="project-card">
+<img src="https://via.placeholder.com/600x400" alt="">
+<div class="project-content">
+<h3>Geocomputing</h3>
+<p>
+GIS programming and automation workflows developed using Python
+and geospatial tools.
+</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section id="skills">
+
+<h2>Technical Skills</h2>
+
+<div class="skills">
+<div class="skill">ArcGIS Pro</div>
+<div class="skill">ArcGIS Online</div>
+<div class="skill">QGIS</div>
+<div class="skill">Python</div>
+<div class="skill">R</div>
+<div class="skill">Remote Sensing</div>
+<div class="skill">Cartography</div>
+<div class="skill">Spatial Analysis</div>
+<div class="skill">Geodatabases</div>
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2>Contact</h2>
+
+<div class="contact">
+<p>Email: clubb027@umn.edu</p>
+<p>GitHub: Cassandra-Clubb</p>
+</div>
+
+</section>
+
+<footer>
+© 2026 Cassandra Clubb GIS Portfolio
+</footer>
+
+</body>
+</html>
