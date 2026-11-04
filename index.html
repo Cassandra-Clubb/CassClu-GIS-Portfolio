@@ -105,11 +105,38 @@ h2 {
     font-size: 2rem;
 }
 
+#about h2 {
+    text-align: left;
+}
+
+.about-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 280px;
+    align-items: center;
+    gap: 48px;
+}
+
 .about {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
+    text-align: left;
     font-size: 1.05rem;
+}
+
+.about p + p {
+    margin-top: 1rem;
+}
+
+.headshot-placeholder {
+    width: 100%;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #9bb9a8;
+    border-radius: 12px;
+    background: #f3f8f5;
+    color: #496b58;
+    text-align: center;
+    font-weight: 600;
 }
 
 .projects-grid {
@@ -177,6 +204,18 @@ footer {
     background: #f8f9fa;
     color: #666;
 }
+
+@media (max-width: 700px) {
+    .about-layout {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .headshot-placeholder {
+        max-width: 280px;
+        margin: 0 auto;
+    }
+}
 </style>
 </head>
 
@@ -202,6 +241,7 @@ footer {
 <section id="about">
 <h2>About:</h2>
 
+<div class="about-layout">
 <div class="about">
 <p>
 My name is Cassandra Clubb. I earned my B.A. in Environmental Science as an ACTC student
@@ -209,11 +249,15 @@ from Saint Catherine University in May 2021. I began my Master of Geographic Inf
 Science at the University of Minnesota in September 2026, with a strong interest in
 Environmental Geography through the lens of conservation.
 </p>
-<br>
 <p>
 I am passionate about spatial analysis to support conservation, environmental management,
 and natural resource decision-making.
 </p>
+</div>
+
+<div class="headshot-placeholder" role="img" aria-label="Placeholder for Cassandra Clubb's headshot">
+Headshot photo goes here
+</div>
 </div>
 
 </section>
