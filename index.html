@@ -199,6 +199,82 @@ h2 {
     font-size: 1.4rem;
 }
 
+.project-button {
+    margin-top: 1rem;
+    padding: 0.7rem 1rem;
+    border: none;
+    border-radius: 8px;
+    background: #2D6A4F;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.project-button:hover {
+    background: #1d4d3a;
+}
+
+.project-dialog {
+    width: min(700px, calc(100% - 2rem));
+    max-height: 85vh;
+    margin: auto;
+    padding: 1.5rem;
+    border: 0;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+.project-dialog::backdrop {
+    background: rgba(0, 0, 0, 0.65);
+}
+
+.project-dialog h2 {
+    text-align: left;
+    margin-bottom: 0.8rem;
+}
+
+.project-dialog img {
+    width: 100%;
+    max-height: 260px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+.project-dialog p {
+    margin-bottom: 1rem;
+}
+
+.dialog-close {
+    float: right;
+    border: none;
+    background: transparent;
+    color: #333;
+    font-size: 1.8rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.project-widgets {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 1.25rem;
+}
+
+.project-widgets div {
+    background: #e9f5ef;
+    color: #1d4d3a;
+    border-radius: 10px;
+    padding: 1rem;
+    font-weight: 600;
+}
+
+.project-widgets div strong {
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
 .skills {
     display: flex;
     flex-wrap: wrap;
@@ -279,7 +355,11 @@ I am particularly interested in using spatial analysis and modeling to examine l
 habitat fragmentation, and the impacts of environmental change on ecosystems. I am also interested in
 applying GIS to identify priority areas for conservation, develop green corridor networks, and better understand
 wildlife movement and ecological connectivity.
-
+</p>
+<p>
+My career goal is to use GIS and geospatial technologies to support decision-making that balances environmental
+protection with human land needs. I hope to contribute to conservation efforts that promote healthy, resilient,
+and connected ecosystems.
 </p>
 <a class="resume-button" href="Resume2026_CassandraUpdate.pdf" target="_blank" rel="noopener noreferrer">View Resume</a>
 </div>
@@ -293,55 +373,160 @@ Headshot photo goes here
 
 <section id="projects">
 
-<h2>Projects</h2>
+<h2>Featured Projects</h2>
 
 <div class="projects-grid">
 
 <div class="project-card">
 <img src="https://via.placeholder.com/600x400" alt="Woodbury Classification project preview">
 <div class="project-content">
-<h3>Classification Methadology</h3>
+<h3>Woodbury Classification</h3>
 <p>Remote sensing, classification, and municipal GIS.</p>
+<button class="project-button" type="button" onclick="document.getElementById('woodbury-details').showModal()">Explore project</button>
 </div>
 </div>
 
 <div class="project-card">
-<img src="https://via.placeholder.com/600x400" alt="cological Representation project preview">
-<div class="project-content">
-<h3>Ecological Representation in Bear Ears National Monument</h3>
-<p>Conservation planning, research, protected lands</p>
-</div>
-</div>
-
-<div class="project-card">
-<img src="https://via.placeholder.com/600x400" alt="Widerness Continum project preview">
+<img src="https://via.placeholder.com/600x400" alt="Wilderness Continuum project preview">
 <div class="project-content">
 <h3>Wilderness Continuum</h3>
-<p>Landscape ecology, spatial analysis</p>
+<p>Landscape ecology and spatial analysis.</p>
+<button class="project-button" type="button" onclick="document.getElementById('wilderness-details').showModal()">Explore project</button>
 </div>
 </div>
 
 <div class="project-card">
-<img src="https://via.placeholder.com/600x400" alt="NDVI Classification project preview">
+<img src="https://via.placeholder.com/600x400" alt="Ecological Representation project preview">
 <div class="project-content">
-<h3>NDVI Classification</h3>
-<p>Classification, habitat assessment.</p>
+<h3>Ecological Representation</h3>
+<p>Conservation planning and research.</p>
+<button class="project-button" type="button" onclick="document.getElementById('ecological-details').showModal()">Explore project</button>
 </div>
 </div>
 
 <div class="project-card">
-<img src="https://via.placeholder.com/600x400" alt="Current Endevors project preview">
+<img src="https://via.placeholder.com/600x400" alt="Bear Ears Video project preview">
 <div class="project-content">
-<h3>Interactive Mapping</h3>
-<p>
-Geospatial Visualizagtion and User Experience
-</p>
+<h3>Bear Ears Video</h3>
+<p>Science communication, storytelling, and public engagement.</p>
+<button class="project-button" type="button" onclick="document.getElementById('bears-details').showModal()">Explore project</button>
+</div>
+</div>
+
+<div class="project-card">
+<img src="https://via.placeholder.com/600x400" alt="Pollinator/InVEST project preview">
+<div class="project-content">
+<h3>Pollinator/InVEST</h3>
+<p>Modeling, ecosystem services, and scenario analysis.</p>
+<button class="project-button" type="button" onclick="document.getElementById('pollinator-details').showModal()">Explore project</button>
+</div>
+</div>
+
+<div class="project-card">
+<img src="https://via.placeholder.com/600x400" alt="Endemic Species Analysis project preview">
+<div class="project-content">
+<h3>Endemic Species Analysis</h3>
+<p>Spatial analysis examining species distribution and environmental relationships using GIS methods.</p>
+<button class="project-button" type="button" onclick="document.getElementById('endemic-details').showModal()">Explore project</button>
+</div>
+</div>
+
+<div class="project-card">
+<img src="https://via.placeholder.com/600x400" alt="Classification Methods project preview">
+<div class="project-content">
+<h3>Classification Methods</h3>
+<p>Remote sensing project comparing classification techniques for land cover mapping.</p>
+<button class="project-button" type="button" onclick="document.getElementById('classification-details').showModal()">Explore project</button>
 </div>
 </div>
 
 </div>
 
 </section>
+
+<dialog id="woodbury-details" class="project-dialog">
+  <button class="dialog-close" type="button" aria-label="Close project details" onclick="this.closest('dialog').close()">×</button>
+  <h2>Woodbury Classification</h2>
+  <img src="https://via.placeholder.com/1200x700" alt="Woodbury classification map preview">
+  <p>This project applied remote sensing and classification techniques to assess municipal land cover patterns and support local planning decisions.</p>
+  <div class="project-widgets">
+    <div><strong>Focus</strong>Municipal land cover</div>
+    <div><strong>Methods</strong>Remote sensing and GIS</div>
+    <div><strong>Goal</strong>Planning support</div>
+  </div>
+</dialog>
+
+<dialog id="wilderness-details" class="project-dialog">
+  <button class="dialog-close" type="button" aria-label="Close project details" onclick="this.closest('dialog').close()">×</button>
+  <h2>Wilderness Continuum</h2>
+  <img src="https://via.placeholder.com/1200x700" alt="Wilderness Continuum landscape analysis preview">
+  <p>This landscape ecology project explored spatial continuity and ecological thresholds across wilderness and managed lands.</p>
+  <div class="project-widgets">
+    <div><strong>Focus</strong>Landscape ecology</div>
+    <div><strong>Methods</strong>Spatial analysis</div>
+    <div><strong>Goal</strong>Ecological connectivity</div>
+  </div>
+</dialog>
+
+<dialog id="ecological-details" class="project-dialog">
+  <button class="dialog-close" type="button" aria-label="Close project details" onclick="this.closest('dialog').close()">×</button>
+  <h2>Ecological Representation</h2>
+  <img src="https://via.placeholder.com/1200x700" alt="Ecological Representation map preview">
+  <p>This project evaluated how well protected areas represent biodiversity and ecological features across a landscape.</p>
+  <div class="project-widgets">
+    <div><strong>Focus</strong>Conservation planning</div>
+    <div><strong>Methods</strong>Conservation analysis</div>
+    <div><strong>Goal</strong>Representation assessment</div>
+  </div>
+</dialog>
+
+<dialog id="bears-details" class="project-dialog">
+  <button class="dialog-close" type="button" aria-label="Close project details" onclick="this.closest('dialog').close()">×</button>
+  <h2>Bear Ears Video</h2>
+  <img src="https://via.placeholder.com/1200x700" alt="Bear Ears storytelling project preview">
+  <p>This work combined geospatial storytelling and public engagement to communicate environmental and cultural landscape issues.</p>
+  <div class="project-widgets">
+    <div><strong>Focus</strong>Science communication</div>
+    <div><strong>Methods</strong>Storytelling and media</div>
+    <div><strong>Goal</strong>Public engagement</div>
+  </div>
+</dialog>
+
+<dialog id="pollinator-details" class="project-dialog">
+  <button class="dialog-close" type="button" aria-label="Close project details" onclick="this.closest('dialog').close()">×</button>
+  <h2>Pollinator/InVEST</h2>
+  <img src="https://via.placeholder.com/1200x700" alt="Pollinator and InVEST workflow preview">
+  <p>This project modeled ecosystem services and explored scenarios for pollinator-supporting landscapes and land use decisions.</p>
+  <div class="project-widgets">
+    <div><strong>Focus</strong>Ecosystem services</div>
+    <div><strong>Methods</strong>Modeling and scenario analysis</div>
+    <div><strong>Goal</strong>Decision support</div>
+  </div>
+</dialog>
+
+<dialog id="endemic-details" class="project-dialog">
+  <button class="dialog-close" type="button" aria-label="Close project details" onclick="this.closest('dialog').close()">×</button>
+  <h2>Endemic Species Analysis</h2>
+  <img src="https://via.placeholder.com/1200x700" alt="Endemic species analysis map preview">
+  <p>This analysis mapped species distributions and evaluated relationships between occurrence patterns and environmental variables.</p>
+  <div class="project-widgets">
+    <div><strong>Focus</strong>Species distribution</div>
+    <div><strong>Methods</strong>Spatial analysis</div>
+    <div><strong>Goal</strong>Environmental relationships</div>
+  </div>
+</dialog>
+
+<dialog id="classification-details" class="project-dialog">
+  <button class="dialog-close" type="button" aria-label="Close project details" onclick="this.closest('dialog').close()">×</button>
+  <h2>Classification Methods</h2>
+  <img src="https://via.placeholder.com/1200x700" alt="Classification methods result preview">
+  <p>This remote sensing project compared classification techniques used for land cover mapping and assessed the strengths of each method.</p>
+  <div class="project-widgets">
+    <div><strong>Focus</strong>Land cover classification</div>
+    <div><strong>Methods</strong>Remote sensing and comparison</div>
+    <div><strong>Goal</strong>Mapping accuracy</div>
+  </div>
+</dialog>
 
 <section id="skills">
 
